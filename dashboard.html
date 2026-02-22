@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Fare Prediction</h2>
+
+  <input id="pickup_lat" placeholder="Pickup Latitude">
+  <input id="pickup_lng" placeholder="Pickup Longitude">
+  <input id="drop_lat" placeholder="Drop Latitude">
+  <input id="drop_lng" placeholder="Drop Longitude">
+
+  <select id="vehicle">
+    <option value="cab">Cab</option>
+    <option value="auto">Auto</option>
+    <option value="bike">Bike</option>
+    <option value="metro">Metro</option>
+    <option value="bus">Bus</option>
+  </select>
+
+  <select id="day">
+    <option>Monday</option>
+    <option>Tuesday</option>
+    <option>Wednesday</option>
+    <option>Thursday</option>
+    <option>Friday</option>
+    <option>Saturday</option>
+    <option>Sunday</option>
+  </select>
+
+  <input id="hour" type="number" placeholder="Hour (0-23)">
+  <label><input type="checkbox" id="sharing"> Sharing Ride</label>
+
+  <button onclick="getFare()">Calculate Fare</button>
+
+  <div id="result" class="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
